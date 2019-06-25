@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <ul>
+        <script type="text/javascript">
+        var grades = {'egoing':10, 'k8805':6, 'sorialgi':80};
+        var arr = null;
+
+        function getArr()  {
+            return  ['a', 'b', 'c'];
+        }
+        arr = getArr();
+
+        for(key in grades)  {
+            document.write("<li>key : "+key+" value : "+grades[key]+"<br />"+"</li>")
+        }
+
+        for(var index in arr)    {
+            //alert(index);
+            alert(arr[index]);
+        }
+        </script>
+        </ul>
+    </body>
+</html>

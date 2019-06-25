@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        function get_members()  {
+            return ['egoing', 'chldpwl56', 'sorialgi'];
+        }
+        var member = get_members();
+
+        function get_argument(arg)  {
+            return arg;
+        }
+
+        numbering = (function()  {
+            var i=0; 
+            while(i<10) {
+                document.write(i);
+                i++;
+            }
+        })(); // 익명함수 => 즉시 실행
+        document.write("<br />");
+
+        //member.push('yeji5620');        
+        function printMember() {
+            for (var i = 0; i < member.length; i++) {
+                document.write(member[i].toUpperCase()+"<br />");
+            }
+        }
+
+        //member.unshift('yeji5620');
+        //member.splice(1, 1, 'yeji5620');
+        member.sort();
+
+        printMember();
+        //numbering();
+        alert(get_argument(1));
+        alert(get_argument(2));
+        </script>
+    </body>
+</html>
