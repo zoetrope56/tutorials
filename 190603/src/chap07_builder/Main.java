@@ -1,5 +1,7 @@
 package chap07_builder;
 
+import chap07_builder.exercise3.FileBuilder;
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -24,6 +26,15 @@ public class Main {
 			String filename = htmlbuilder.getResult();
 			System.out.println(filename + "가 작성되었습니다.");
 		}
+		else if(args[0].equals("text"))	{
+			// exercise3 solution
+			FileBuilder filebuilder = new FileBuilder();
+			Director director = new Director(filebuilder);
+			director.construct();
+			
+			String filename = filebuilder.getResult();
+			System.out.println(filename + "가 작성되었습니다.");			
+		}
 		else	{
 			usage();
 			System.exit(0);
@@ -35,6 +46,7 @@ public class Main {
 	private static void usage() {
 		System.out.println("Usage : java Main plain	일반 텍스트로 문서 작성");
 		System.out.println("Usage : java Main html	HTML 파일로 문서 작성");
+		System.out.println("Usage : java Main text	text 파일로 문서 작성");
 		
 	}
 
