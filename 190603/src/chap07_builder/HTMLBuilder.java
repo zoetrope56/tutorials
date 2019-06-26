@@ -19,13 +19,13 @@ public class HTMLBuilder extends Builder {
 			e.printStackTrace();
 		}
 		
-		writer.println("<html><head><title> + title + </title></head><body>");
+		writer.println("<html><head><title>" + title + "</title></head><body>");
 		writer.print("<h1>"+title+"</h1>");
 	}
 
 	@Override
 	public void makeString(String str) {
-		writer.println("<p>+str+</p>");
+		writer.println("<p>"+str+"</p>");
 		
 	}
 
