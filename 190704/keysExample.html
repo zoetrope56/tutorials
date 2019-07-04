@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+</head>
+<body>
+    <script type="text/javascript">
+    var arr = ["a", "b", "c"];
+    console.log('Object.keys(arr)', Object.keys(arr));
+    // Object.keys(arr) Array(3)
+    // Object.keys => Object라고 하는 생성자 함수
+
+    var o = new Object();
+    console.log('o.toString()', o.toString());
+    // o.toString() [object Object]
+    // toString() => Prototype test
+
+    var a = new Array(1, 2, 3);     // Array는 암시적으로 Object를 부모로 하는 라이브러리
+    console.log('a.toString()', a.toString());
+    // a.toString() 1,2,3
+    /*
+        var o = {}
+        o.toString();
+        ==> 출력 : "[object Object]"
+
+        ar a = [1, 2, 3];
+        a.toString();
+        ==> 출력 : "1,2,3"
+    */
+
+    </script>
+    
+</body>
+</html>
