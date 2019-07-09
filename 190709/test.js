@@ -29,5 +29,41 @@ str.prop = 'everybody';
 console.log(str.prop);      // undefined
 
 
+var a = 1;  // a와 1은 원시 데이터 타입 => 복사
+var b = a;
+b = 2;      // 따라서 b의 데이터를 수정해도 a의 데이터에 영향끼치지 않음
+console.log(a);     // 1
+
+var a = {'id':1};   // a안에 들어있는 것은 객체 => 참조
+var b = a;
+//b.id = 2;           // 객체형이므로 b의 id와 a의 id가 같은 데이터를 바라본다.
+b = {'id':2}          // 새로운 객체 생성 => a와 다른 객체를 바라봄
+console.log(a.id);    // 2
+/**
+ * 변수에 담겨있는 데이터가 원시형이면 그 안에는 실제 데이터가 들어있고,
+ * 객체면 변수 안에는 데이터에 대한 참조 방법이 들어있다.
+ */
 
 
+ var a = 1;
+ function func(b) {
+     b=2;
+ }
+ func(a);
+ console.log(a);    // 1
+
+ var a = {'id':1};
+ function func(b) {
+     b = {'id':2};
+                    // b = a;   (참조)
+ }                  // b = {'id': 2};  ==> 새로운 객체를 생성했기 때문에 
+func(a);            //                      b와 a사이의 연결이 끊어짐        
+console.log(a.id);  // 1
+
+var a = {'id':1};
+function func(b) {
+    b.id = 2;       // b=a (참조), b.id = 2 ==> 실제 데이터 입력
+                    // id를 수정함
+}
+func(a);
+console.log(a.id);  // 2
