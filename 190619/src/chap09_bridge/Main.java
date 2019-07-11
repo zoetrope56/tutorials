@@ -1,4 +1,4 @@
-package chap09_bridge;
+package chap09_bridge; 
 
 public class Main {
 
@@ -11,7 +11,7 @@ public class Main {
 		d2.display();
 		d3.display();
 		d3.multiDisplay(5);
-
+		
 	}
 
 }
