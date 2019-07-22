@@ -10,7 +10,7 @@ public class IncreaseDisplay extends CountDisplay{
 	}
 	
 	public void IncreaseDisplay(int level)	{
-		int count=0;
+		int count=1;
 		for(int i=0; i<level; i++)	{
 			multiDisplay(count);
 			count+=num;			
