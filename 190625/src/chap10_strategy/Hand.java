@@ -4,6 +4,7 @@ public class Hand {
 	public static final int HANDVALUE_GUU = 0;
 	public static final int HANDVALUE_CHO = 1;
 	public static final int HANDVALUE_PAA = 2;
+	
 	public static final Hand[] hand = {
 			new Hand(HANDVALUE_GUU),
 			new Hand(HANDVALUE_CHO),
